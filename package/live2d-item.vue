@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name:live2dItem,
+	name:"live2dItem",
 	data() {
 		return {
 			currentIndex: 0

@@ -10,7 +10,7 @@
 import live2dItem from './live2d-item.vue';
 import live2dmin from './live2d.min.js';
 export default {
-	name:live2d,
+	name:"live2d",
 	components: {
 		live2dItem
 	},
@@ -156,7 +156,6 @@ export default {
 			this.showMessage(message, 4000, 10);
 			if (!this.modelList) await this.loadModelList();
 			const target = this.randomSelection(this.modelList.models[modelId]);
-			console.log(this.cdnPath);
 			loadlive2d('live2d', `${this.cdnPath}model/${target}/index.json`);
 		},
 		async loadRandModel() {
@@ -171,7 +170,6 @@ export default {
 			let modelId = localStorage.getItem('modelId');
 			if (!this.modelList) await this.loadModelList();
 			const index = ++modelId >= this.modelList.models.length ? 0 : modelId;
-			console.log(this.modelList)
 			this.loadModel(index, 0, this.modelList.messages[index]);
 		}
 	}
