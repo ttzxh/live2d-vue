@@ -208,18 +208,11 @@ body {
 }
 
 #waifu {
-	bottom: -1000px;
-	left: 0;
+	right: 0;
+	bottom: 0;
 	line-height: 0;
-	margin-bottom: -10px;
 	position: fixed;
-	transform: translateY(3px);
-	transition: transform 0.3s ease-in-out, bottom 3s ease-in-out;
 	z-index: 1;
-}
-
-#waifu:hover {
-	transform: translateY(0);
 }
 
 #waifu-tips {
@@ -261,7 +254,7 @@ body {
 	color: #aaa;
 	opacity: 0;
 	position: absolute;
-	right: -10px;
+	right: 290px;
 	top: 70px;
 	transition: opacity 1s;
 }

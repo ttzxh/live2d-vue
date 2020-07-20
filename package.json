@@ -1,7 +1,11 @@
 {
-  "name": "live2dtest",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ttzxh-vue-live2d",
+  "version": "0.1.5",
+	"main": "index.js",
+  "private": false,
+	"author":{
+		"name": "zxh"
+	},
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

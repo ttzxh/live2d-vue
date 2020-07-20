@@ -1,5 +1,5 @@
 <template>
-	<div id="waifu" style="position: absolute;top: 50px;">
+	<div id="waifu">
 		<div id="waifu-tips"></div>
 		<canvas id="live2d" width="800" height="800"></canvas>
 		<div id="waifu-tool"><live2dItem :className="className" @itemClick="itemClick" @itemEnter="itemEnter"></live2dItem></div>
@@ -206,18 +206,11 @@ body {
 }
 
 #waifu {
-	bottom: -1000px;
-	left: 0;
+	right: 0;
+	bottom: 0;
 	line-height: 0;
-	margin-bottom: -10px;
 	position: fixed;
-	transform: translateY(3px);
-	transition: transform 0.3s ease-in-out, bottom 3s ease-in-out;
 	z-index: 1;
-}
-
-#waifu:hover {
-	transform: translateY(0);
 }
 
 #waifu-tips {

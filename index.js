@@ -1,0 +1,1 @@
+module.exports = require('./dist/ttzxh-vue-live2d.umd.min.js');

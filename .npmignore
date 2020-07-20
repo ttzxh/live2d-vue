@@ -1,0 +1,8 @@
+# 忽略目录
+/public
+/package
+/src
+
+# 忽略指定文件
+*.config.js
+*.map

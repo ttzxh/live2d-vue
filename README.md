@@ -1,40 +1,44 @@
-# live2dtest
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+# 使用方法
+```JavaScript
+	npm i ttzxh-vue-live2d
+	
+	import Vue from 'vue'
+	import App from './App.vue'
+	
+	import live2d from 'ttzxh-vue-live2d'
+	import live2dcss from '../node_modules/ttzxh-vue-live2d/dist/ttzxh-vue-live2d.css'
+	
+	Vue.use(live2d)
 ```
 
-### Customize configuration
-### 代码方法
+# 方法
+
+| 方法                              | 参数                  | 参数说明                   |                             |                                                              | 方法说明                            |
+| --------------------------------- | --------------------- | -------------------------- | --------------------------- | ------------------------------------------------------------ | :---------------------------------- |
+| showMessagetext,timeout,priority) | text,timeout,priority | text 角色说话的内容 string | timeout 弹框持续时间 number | priority 说话内容的权重 权重高的内容会覆盖权重低的<br/>权重低的内容不会覆盖权重高的 | 角色说话内容弹框                    |
+| loadRandModel                     | 无                    |                            |                             |                                                              | 角色换肤 注意：有些角色只有一个皮肤 |
+| loadloadOtherModel                | 无                    |                            |                             |                                                              | loadloadOtherModel()<br/>更换角色   |
+
+# 事件
+
+| 事件名                 | 参数  | 参数说明                       | 事件说明               | 注意         |
+| ---------------------- | ----- | ------------------------------ | ---------------------- | ------------ |
+| live2dItemClick(index) | index | index为当前icon的索引 从0 开始 | 点击当前icon时触发     | 别忘了加icon |
+| live2dItemEnter(index) | index | index为当前icon的索引 从0 开始 | 鼠标进入当前icon时触发 |              |
+
+# 放icon的地方
+
+```JavaScript
+	:clasName  Array 这是一个数组 数组里面存放icon
 ```
-showMessage(text,timeout,priority)
-角色说话内容弹框
-第一个参数:角色说话的内容 string
-第二个参数:弹框持续时间 number
-第三个参数:说话内容的权重 权重高的内容会覆盖权重低的
-权重低的内容不会覆盖权重高的
 
-loadRandModel()
-角色换肤 注意：有些角色只有一个皮肤
 
-loadloadOtherModel()
-更换角色
 
+# 举个例子
+
+```javascript
 <live2d @live2dItemClick="live2dItemClick" @live2dItemEnter="live2dItemEnter" ref="aaa" :className="className"></live2d>
-用法
-live2dItemClick 点击icon时触发事件 
-接受一个参数index 当前点击的按钮所在的索引值
+
 live2dItemClick(index) {
 			//第一个icon被点击时触发
 			if (index === 0) {
@@ -44,16 +48,16 @@ live2dItemClick(index) {
 				this.$refs.aaa.loadRandModel();
 			}
 		},
-		live2dItemClick 鼠标进入icon时出发事件
-		接受一个参数index 当前点击的按钮所在的索引值
+	
 		live2dItemEnter(index) {
 			this.$refs.aaa.showMessage('我是live2d', 2000, 1000);
 		}
-		clasName:Array 接受数组 数组为icon 的类名
-		别忘记载入icon的包 或 cdn
+
+		className
 		以font-awesome为例子
 		className: ['fa fa-lg fa-times', 'fa fa-lg fa-info-circle']
 		
-		
 ```
 
+# github
+[源码](https://github.com/ttzxh/live2d-vue)
