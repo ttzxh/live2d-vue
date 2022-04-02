@@ -1,8 +1,14 @@
 {
   "name": "ttzxh-vue-live2d",
-  "version": "0.1.5",
+  "version": "0.2.7",
 	"main": "index.js",
   "private": false,
+  "keywords": ["live2d","vue","waifu"],
+  "description": "基于vue的简单强大的live2d模型",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ttzxh/live2d-vue"
+},
 	"author":{
 		"name": "zxh"
 	},

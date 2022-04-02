@@ -9,7 +9,7 @@
       { botton: positionBottom },
     ]"
   >
-    <div>
+    <div style="position: relative">
       <div
         id="waifu-tips"
         :style="[{ width: TipWidth }, { height: TipHeight }]"
